@@ -1,5 +1,6 @@
 all:
-  ansible_user: ec2-user
-  ansible_become: yes
+  vars:
+    ansible_user: ec2-user
+    ansible_become: yes
   hosts:
     "172.31.8.84":
