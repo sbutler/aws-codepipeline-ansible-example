@@ -1,0 +1,13 @@
+---
+  - name: Run some simple commands
+    hosts: all
+    gather_facts: False
+    tasks:
+    - name: create a motd file
+      copy:
+        dest: /etc/motd
+        mode: '0644'
+        owner: root
+        group: root
+        content: |
+          This is an example MOTD
